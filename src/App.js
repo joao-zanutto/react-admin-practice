@@ -13,6 +13,7 @@ import {
 
 import jsonServerProvider from 'ra-data-json-server';
 import UserIcon from '@material-ui/icons/Group';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ptBrMessages from 'ra-language-pt-br';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
@@ -51,7 +52,7 @@ function App() {
 				title='Moradores'
 			/>
 			<Resource
-				icon={UserIcon}
+				icon={BookmarkIcon}
 				name='categories'
 				list={ListGuesser}
 				options={{ label: 'Categorias' }}
