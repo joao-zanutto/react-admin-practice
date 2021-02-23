@@ -1,10 +1,16 @@
-import { Admin, Resource } from 'react-admin';
-import { ClientsCreate, ClientsEdit, ClientsList } from './resources/clients';
+import { Admin, Resource, ListGuesser } from 'react-admin';
 import {
-	ProposalsList,
-	ProposalsEdit,
-	ProposalsCreate,
-} from './resources/proposals';
+	ResidersCreate,
+	ResidersEdit,
+	ResidersList,
+} from './resources/residers';
+
+import {
+	TransactionsList,
+	TransactionsEdit,
+	TransactionsCreate,
+} from './resources/transactions';
+
 import jsonServerProvider from 'ra-data-json-server';
 import UserIcon from '@material-ui/icons/Group';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
@@ -25,23 +31,31 @@ function App() {
 		<Admin
 			i18nProvider={i18nProvider}
 			dataProvider={dataProvider}
-			title='Sustento Energia Solar'>
+			title='República 7 Eh Poko'>
 			<Resource
 				icon={LibraryBooksIcon}
-				name='proposals'
-				list={ProposalsList}
-				edit={ProposalsEdit}
-				create={ProposalsCreate}
-				options={{ label: 'Propostas' }}
-				title='Propostas'
+				name='transactions'
+				list={TransactionsList}
+				edit={TransactionsEdit}
+				create={TransactionsCreate}
+				options={{ label: 'Transações' }}
+				title='Transações'
 			/>
 			<Resource
 				icon={UserIcon}
-				name='clients'
-				list={ClientsList}
-				edit={ClientsEdit}
-				create={ClientsCreate}
-				options={{ label: 'Clientes' }}
+				name='residers'
+				list={ResidersList}
+				edit={ResidersEdit}
+				create={ResidersCreate}
+				options={{ label: 'Moradores' }}
+				title='Moradores'
+			/>
+			<Resource
+				icon={UserIcon}
+				name='categories'
+				list={ListGuesser}
+				options={{ label: 'Categorias' }}
+				title='Categorias'
 			/>
 		</Admin>
 	);

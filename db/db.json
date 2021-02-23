@@ -1,0 +1,39 @@
+{
+  "residers": [
+    {
+      "id": 1,
+      "name": "Gabriel",
+      "alias": "Borel",
+      "phone": "00-00-00",
+      "city": "São Carlos"
+    },
+    {
+      "name": "Wesley",
+      "alias": "Vózinha",
+      "city": "São Carlos",
+      "phone": "00-00-00",
+      "id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "totalValue": "10.1",
+      "title": "Compras de Limpeza",
+      "residerId": 1,
+      "id": 2,
+      "categoryId": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "type": "Saida",
+      "cat": "Mercado"
+    },
+    {
+      "id": 2,
+      "type": "Entrada",
+      "cat": "Aluguel"
+    }
+  ]
+}
